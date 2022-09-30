@@ -10,10 +10,13 @@ The purpose of this project is to create a randonly password generator that meet
 1. Click on the red Generate Password button.
 2. This is going to take the user through some prompts. 
 3. Please read carefully as there are some criterias that should be met.
-    Hint:   * By clicking "OK", it will translate to yes.
-            * By clicking "cancel", it will translate to no.
-            * The password length criteria should be 8 characters to 128 characters long.
-            * There has to be at least one character type.
+
+    **Hint**
+    * By clicking "OK", it will translate to yes.
+    * By clicking "cancel", it will translate to no.
+    * The password length criteria should be 8 characters to 128 characters long.
+    * There has to be at least one character type.
+
 4. If there is an invalid input from the user, an alert prompt will pop up.
 5. Any error will take you back to the beginning to restart the process. 
 6. After following all the prompts, a password should be displayed within the box. 
@@ -22,9 +25,10 @@ The purpose of this project is to create a randonly password generator that meet
 
 
 **CODE Snippet**
-    This is part of the javascript. I want to share this snippet as I thought how interesting it is. This section right here determines the criterias of the password generator almost like how a writer determining how the story ends. 
+    This is part of the javascript. I want to share this snippet as I thought how interesting it is. This section right here determines the criterias of the password generator almost like how a writer determining how the story goes. 
 
-'''function generatePassword(){
+'''
+function generatePassword(){
   var Choice = prompt("Please enter the number of characters for password. Minimum = 8 Characters. Maximum = 128 Characters");
   var passwordLength = parseInt(Choice)
   if (passwordLength < 8 || passwordLength > 128){
@@ -38,15 +42,15 @@ The purpose of this project is to create a randonly password generator that meet
     return
     }
   var numbers = confirm("Should there be a number character in your password?")'
-  var specialCharacter = confirm("Should there be any special characters in your password?")'''
+  var specialCharacter = confirm("Should there be any special characters in your password?")
+  '''
 
 
-|**Technologies Used** |
------------------------
-    *HTML5
-    *CSS
-    *Git
-    *GitHub
+**Technologies Used** 
+* HTML5
+* CSS
+* Git
+* GitHub
 
 Author: Mai Moua 
 [GitHub Profile](https://github.com/SkyWalkerMM26)
