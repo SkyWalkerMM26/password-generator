@@ -1,11 +1,12 @@
 // Assignment code here
-// Set all the variables
-// If user clicks on Generate Password, a prompt should pop up. 
+// Set all the variables the appropiate characters.
+// If user clicks on Generate Password button, a prompt should pop up. 
 // The prompt should ask how long the password should be with a min of 8 and a max of 128 characters.
-// If user input is x >= 8 || x=<128, then document the data. 
-// the User is going to confirma all the other features by pressing Okay or cancel. 
-// If any of the data collected doesn't match the options available, tell user invalid input.
-// if all data matches, generate a password for the user.
+// If user input is x < 8 || x>128, then give out an alert.
+// the User is going to confirms all the other features by pressing Okay or cancel. 
+// Make an if statement to where the User has to pick a type of character.
+// If any of the data collected doesn't match the options available, tell user invalid input with a message.
+// If all data matches, generate an iteration of a random selector.
 // Get references to the #generate element. (document.createElement() method creates the HTML element specified by tagName or unk). The querySelector() method returns the first element that matches a CSS selector.
 // selecting 
 var generateBtn = document.querySelector("#generate");
@@ -29,7 +30,9 @@ var lowerCaseList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o"
 var upperCaseList =["A", "B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
 
-// A prompt to pop up and have the user select/confirm the criteria generate password.
+// A prompt to pop up and have the user select/confirm the criteria generate password. 
+//This will determine what the random password will be. If anything a true, then we will have to refer to the variable list.
+
 function generatePassword(){
   var Choice = prompt("Please enter the number of characters for password. Minimum = 8 Characters. Maximum = 128 Characters");
   var passwordLength = parseInt(Choice)
@@ -45,7 +48,9 @@ function generatePassword(){
     }
   var numbers = confirm("Should there be a number character in your password?")
   var specialCharacter = confirm("Should there be any special characters in your password?")
-   
+
+  
+//  This is an array list. Are using the variables that are define above to be consolidated into here but this is what the user has selected so we want to reference to this list.
 var options = []
 
 if (numbers == true) {
@@ -61,16 +66,31 @@ if (upperCase == true){
   options.push(upperCaseList)
 }
 
+
+//we are making the system pick a random number from the a function that will generate a random list.
 function randomNumber(min, max){
-  return Math.floor(Math.random()*(max-min)+ min)
+  if (!max){
+    max = min
+    min = 0
+  }
+  var randMinandMax = Math.random()
+  return Math.floor(min*(1 - randMinandMax) + randMinandMax*max)
+}
+function getRandom(list) {
+  return list[randomNumber(list.length)]
 }
 
+var generatePassword = ""
 
 
-
-for (var [i] = 0; i < passwordLength; i++){
-  var random
+// This section is setting an iternation of a function that was defined earlier, which is getting random characters from the options Array list that is related to the variable lists that was defined in the beginning of this script.  
+for (var i = 0; i < passwordLength; i++){
+  var randomList = getRandom(options)
+  var randomCharacter = getRandom(randomList)
+  generatePassword += randomCharacter
 }
+ return generatePassword
+
 
 }
 
