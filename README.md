@@ -55,4 +55,4 @@ function generatePassword(){
 Author: Mai Moua 
 [GitHub Profile](https://github.com/SkyWalkerMM26)
 [LinkedIn](https://www.linkedin.com/in/mai-moua-69a50517a/)
-[Portfolio Website]()
+[Portfolio Website](https://skywalkermm26.github.io/password-generator/)
