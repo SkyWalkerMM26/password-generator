@@ -24,46 +24,42 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 //set variables
-var specialCharacters = "!@#$%^&*()";
-var length = "";
-var numbers = "1234567890";
-var alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-var minLength = "";
-var minNumbers = "";
-var minLowerCase = "";
-var minUpperCase = "";
-var minSpecialCharacter = "";
-var randomPasswordGenerated = "";
-var passwordBlank = [];
-
+var userNumbers = ["0", "1", "2", "3","4","5", "6", "7", "8", "9"]
+var specialCharacter = ["!", "@", "#", "$", "%", "&"]
+var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+var upperCase =["A", "B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
 
 // A prompt to pop up and have the user select/confirm the criteria generate password.
 function generatePassword(){
-  var length = prompt("Please enter the number of characters for password. Minimum = 8 Characters. Maximum = 128 Characters");
-  if ((length < 7) && (length > 129)){
-    alert ("Please enter a valid value within range.");
-      generateBtn();}
+  var Choice = prompt("Please enter the number of characters for password. Minimum = 8 Characters. Maximum = 128 Characters");
+  var passwordLength = parseInt(Choice)
+  if (passwordLength < 8 || passwordLength > 128){
+    alert ("Please enter a valid value within range.")
+    generateBtn();
+    }
   var lowerCase = confirm("Should there be lowercase character in your password?");
   var upperCase = confirm("Should there be UPPERCASE character in your password?");
-  if ((lowerCase !== true) && (upperCase !== true)){
-    alert ("There must be at least one character type.");
-    generatePassword();}
-  var numbers = confirm("Should there be a number character in your password?");
+  if (lowerCase !== true || upperCase !== true){
+    alert ("There must be at least one character type.")
+    return
+    }
+  
+  var userNumbers = confirm("Should there be a number character in your password?");
   var specialCharacter = confirm("Should there be any special characters in your password?");
    
-
+  answer = console.log(length);
+  answer = console.log(lowerCase);
+  answer = console.log(upperCase);
+  answer = console.log(numbers);
+  answer = console.log(specialCharacter);
 
 
   // Generator loop for random password
   for (let i = 0; i < length; i++) {
-    var randomNumber = Math.floor(Math.random() * length);
-    randomPasswordGenerated += minLength;
-    randomPasswordGenerated += minLowerCase;
-    randomPasswordGenerated += minUpperCase;
-    randomPasswordGenerated += minNumbers;
-    randomPasswordGenerated += minSpecialCharacter;
-
+    var allanswers = answer[Math.floor(Math.random() * answer.length)];
+    passwordBlank.push(allanswers);
+    console.log(allanswers);
   }
 
   var password = passwordBlank.join("generatePassword");
@@ -71,7 +67,6 @@ function generatePassword(){
   return password;
   
   
-  writePassword();
 
 }
 
