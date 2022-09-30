@@ -1,12 +1,11 @@
 // Assignment code here
+// Set all the variables
 // If user clicks on Generate Password, a prompt should pop up. 
 // The prompt should ask how long the password should be with a min of 8 and a max of 128 characters.
-// If user input is x >= 8 && x=<128, then document the data. 
+// If user input is x >= 8 || x=<128, then document the data. 
 // the User is going to confirma all the other features by pressing Okay or cancel. 
 // If any of the data collected doesn't match the options available, tell user invalid input.
 // if all data matches, generate a password for the user.
-
-
 // Get references to the #generate element. (document.createElement() method creates the HTML element specified by tagName or unk). The querySelector() method returns the first element that matches a CSS selector.
 // selecting 
 var generateBtn = document.querySelector("#generate");
@@ -36,23 +35,22 @@ function generatePassword(){
   var passwordLength = parseInt(Choice)
   if (passwordLength < 8 || passwordLength > 128){
     alert ("Please enter a valid value within range.")
-    generateBtn();
+    return
     }
-  var lowerCase = confirm("Should there be lowercase character in your password?");
-  var upperCase = confirm("Should there be UPPERCASE character in your password?");
-  if (lowerCase !== true || upperCase !== true){
+  var lowerCase = confirm("Should there be lowercase character in your password?")
+  var upperCase = confirm("Should there be UPPERCASE character in your password?")
+  if (lowerCase !== true && upperCase !== true){
     alert ("There must be at least one character type.")
     return
     }
-  var numbers = confirm("Should there be a number character in your password?");
-  var specialCharacter = confirm("Should there be any special characters in your password?");
+  var numbers = confirm("Should there be a number character in your password?")
+  var specialCharacter = confirm("Should there be any special characters in your password?")
    
 var options = []
 
 if (numbers == true) {
   options.push(numberList)
 }
-
 if (specialCharacter == true){
   options.push(specialList)
 }
@@ -63,27 +61,16 @@ if (upperCase == true){
   options.push(upperCaseList)
 }
 
-console.log(options);
-
-  answer = console.log(length);
-  answer = console.log(lowerCase);
-  answer = console.log(upperCase);
-  answer = console.log(numbers);
-  answer = console.log(specialCharacter);
+function randomNumber(min, max){
+  return Math.floor(Math.random()*(max-min)+ min)
+}
 
 
-  // Generator loop for random password
-  for (let i = 0; i < length; i++) {
-    var allanswers = answer[Math.floor(Math.random() * answer.length)];
-    passwordBlank.push(allanswers);
-    console.log(allanswers);
-  }
 
-  var password = passwordBlank.join("generatePassword");
-  console.log(password);
-  return password;
-  
-  
+
+for (var [i] = 0; i < passwordLength; i++){
+  var random
+}
 
 }
 
