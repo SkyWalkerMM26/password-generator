@@ -1,7 +1,8 @@
 # Password Generator
-[pass generator.webm](https://user-images.githubusercontent.com/113512061/193189858-bd5506c9-5c3b-4ce2-ba7a-8dba33d969da.webm)
+The purpose of this project is to create a randonly password generator that meets certain criterias to provide a strong password for security purposes. 🚨
 
-The purpose of this project is to create a randonly password generator that meets certain criterias to provide a strong password for security purposes. 
+[Password-generator-video.webm](https://user-images.githubusercontent.com/113512061/193195351-6438ef56-399f-4fee-9dda-1e705ef304b2.webm)
+
 
 ## How do we generate a password?
 
@@ -42,14 +43,10 @@ The purpose of this project is to create a randonly password generator that meet
 
 |**Technologies Used** |
 -----------------------
-| HTML5                |
------------------------
-| CSS                  |
------------------------
-| Git                  |
------------------------
-| GitHub               |
------------------------
+    *HTML5
+    *CSS
+    *Git
+    *GitHub
 
 Author: Mai Moua 
 [GitHub Profile](https://github.com/SkyWalkerMM26)
