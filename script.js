@@ -24,10 +24,10 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 //set variables
-var userNumbers = ["0", "1", "2", "3","4","5", "6", "7", "8", "9"]
-var specialCharacter = ["!", "@", "#", "$", "%", "&"]
-var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-var upperCase =["A", "B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+var numberList = ["0", "1", "2", "3","4","5", "6", "7", "8", "9"]
+var specialList = ["!", "@", "#", "$", "%", "&"]
+var lowerCaseList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+var upperCaseList =["A", "B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
 
 // A prompt to pop up and have the user select/confirm the criteria generate password.
@@ -44,10 +44,27 @@ function generatePassword(){
     alert ("There must be at least one character type.")
     return
     }
-  
-  var userNumbers = confirm("Should there be a number character in your password?");
+  var numbers = confirm("Should there be a number character in your password?");
   var specialCharacter = confirm("Should there be any special characters in your password?");
    
+var options = []
+
+if (numbers == true) {
+  options.push(numberList)
+}
+
+if (specialCharacter == true){
+  options.push(specialList)
+}
+if (lowerCase == true){
+  options.push(lowerCaseList)
+}
+if (upperCase == true){
+  options.push(upperCaseList)
+}
+
+console.log(options);
+
   answer = console.log(length);
   answer = console.log(lowerCase);
   answer = console.log(upperCase);
