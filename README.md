@@ -27,7 +27,7 @@ The purpose of this project is to create a randonly password generator that meet
 **CODE Snippet**
     This is part of the javascript. I want to share this snippet as I thought how interesting it is. This section right here determines the criterias of the password generator almost like how a writer determining how the story goes. 
 
-'''
+```
 function generatePassword(){
   var Choice = prompt("Please enter the number of characters for password. Minimum = 8 Characters. Maximum = 128 Characters");
   var passwordLength = parseInt(Choice)
@@ -43,7 +43,7 @@ function generatePassword(){
     }
   var numbers = confirm("Should there be a number character in your password?")'
   var specialCharacter = confirm("Should there be any special characters in your password?")
-  '''
+  ```
 
 
 **Technologies Used** 
